@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>留言板 - 津食今忆</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/message.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <div id="navbar-container"></div>
+
+    <!-- 主要内容 -->
+    <main>
+        <section class="message-hero">
+            <div class="message-hero-content">
+                <h1>留言板</h1>
+                <p>分享您的美食记忆，或者告诉我们您对天津美食的看法</p>
+            </div>
+        </section>
+
+        <section class="message-board">
+            <div class="message-container">
+                <div class="message-form-container">
+                    <h2 class="section-title">发表留言</h2>
+                    <form id="message-form">
+                        <div class="form-group">
+                            <label for="name">您的姓名</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">电子邮箱</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">留言内容</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">提交留言</button>
+                    </form>
+                </div>
+
+                <div class="message-list-container">
+                    <h2 class="section-title">留言列表</h2>
+                    <div id="message-list">
+                        <!-- 留言列表将通过JavaScript动态加载 -->
+                        <div class="message-item">
+                            <div class="message-header">
+                                <span class="message-author">张三</span>
+                                <span class="message-time">2023-05-15</span>
+                            </div>
+                            <div class="message-content">
+                                每次回天津，一定要去吃耳朵眼炸糕，那个味道满满都是童年的回忆！
+                            </div>
+                        </div>
+                        <div class="message-item">
+                            <div class="message-header">
+                                <span class="message-author">李四</span>
+                                <span class="message-time">2023-05-10</span>
+                            </div>
+                            <div class="message-content">
+                                上次去天津旅游，尝了正宗的狗不理包子，果然名不虚传，皮薄馅大，吃一口满嘴喷香！
+                            </div>
+                        </div>
+                        <div class="message-item">
+                            <div class="message-header">
+                                <span class="message-author">王五</span>
+                                <span class="message-time">2023-05-03</span>
+                            </div>
+                            <div class="message-content">
+                                天津麻花脆香可口，一定要趁热吃，最好配上一杯热茶，绝配！
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>津食今忆</h2>
+                <p>品味百年老字号，回忆津门好滋味</p>
+            </div>
+            <div class="footer-links">
+                <h3>快速链接</h3>
+                <ul>
+                    <li><a href="../index.html">首页</a></li>
+                    <li><a href="foods.html">美食展示</a></li>
+                    <li><a href="culture.html">美食文化</a></li>
+                    <li><a href="message.html">留言板</a></li>
+                    <li><a href="about.html">关于我们</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>联系我们</h3>
+                <p>地址: 天津师范大学管理学院津食今忆项目组</p>
+                <p>电话: 022-12345678</p>
+                <p>邮箱: contact@jinshjinyi.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 津食今忆 - 天津美食老字号宣传网站</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../js/script.js"></script>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/message.js"></script>
+</body>
+</html> 

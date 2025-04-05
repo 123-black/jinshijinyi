@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>美食展示 - 津食今忆</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/foods.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <div id="navbar-container"></div>
+
+    <!-- 主要内容 -->
+    <main>
+        <section class="foods-hero">
+            <div class="foods-hero-content">
+                <h1>天津老字号美食</h1>
+                <p>百年传承，匠心制作，品味津门独特风味</p>
+            </div>
+        </section>
+
+        <section class="foods-filter">
+            <div class="filter-container">
+                <div class="filter-group">
+                    <label>分类筛选：</label>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-category="all">全部</button>
+                        <button class="filter-btn" data-category="面点">面点</button>
+                        <button class="filter-btn" data-category="糕点">糕点</button>
+                        <button class="filter-btn" data-category="小吃">小吃</button>
+                        <button class="filter-btn" data-category="饮品">饮品</button>
+                        <button class="filter-btn" data-category="名菜">名菜</button>
+                    </div>
+                </div>
+                <div class="search-box">
+                    <input type="text" id="food-search" placeholder="搜索美食...">
+                    <button id="search-btn"><i class="search-icon">🔍</i></button>
+                </div>
+            </div>
+        </section>
+
+        <section class="foods-grid">
+            <div class="foods-container">
+                <!-- 狗不理包子 -->
+                <div class="food-item" data-category="面点">
+                    <div class="food-image">
+                        <img src="../images/goubuli2.jpg" alt="狗不理包子">
+                    </div>
+                    <div class="food-content">
+                        <h3>狗不理包子</h3>
+                        <div class="food-meta">
+                            <span class="food-year">1858年</span>
+                            <span class="food-location">天津市南开区</span>
+                        </div>
+                        <p>百年老字号，天津特色小吃代表，褶多皮薄馅大，汤汁丰富。</p>
+                        <a href="food-detail.html?id=goubuli" class="btn">了解详情</a>
+                    </div>
+                </div>
+
+                <!-- 耳朵眼炸糕 -->
+                <div class="food-item" data-category="糕点">
+                    <div class="food-image">
+                        <img src="../images/erduoyan-shop.jpg" alt="耳朵眼炸糕">
+                    </div>
+                    <div class="food-content">
+                        <h3>耳朵眼炸糕</h3>
+                        <div class="food-meta">
+                            <span class="food-year">清代</span>
+                            <span class="food-location">天津市河西区</span>
+                        </div>
+                        <p>天津传统特色小吃，外酥里糯，甜咸适口，形似耳朵独具特色。</p>
+                        <a href="food-detail.html?id=erduoyan" class="btn">了解详情</a>
+                    </div>
+                </div>
+
+                <!-- 桂发祥麻花 -->
+                <div class="food-item" data-category="糕点">
+                    <div class="food-image">
+                        <img src="../images/mahua-shop.jpg" alt="桂发祥十八街麻花">
+                    </div>
+                    <div class="food-content">
+                        <h3>桂发祥十八街麻花</h3>
+                        <div class="food-meta">
+                            <span class="food-year">1927年</span>
+                            <span class="food-location">天津市河东区</span>
+                        </div>
+                        <p>香脆可口，四香一酥，天津著名传统特色小吃，非物质文化遗产。</p>
+                        <a href="food-detail.html?id=mahua" class="btn">了解详情</a>
+                    </div>
+                </div>
+
+                <!-- 崩豆 -->
+                <div class="food-item" data-category="小吃">
+                    <div class="food-image">
+                        <img src="../images/bengdou.jpg" alt="崩豆">
+                    </div>
+                    <div class="food-content">
+                        <h3>崩豆</h3>
+                        <div class="food-meta">
+                            <span class="food-year">清代</span>
+                            <span class="food-location">天津市河北区</span>
+                        </div>
+                        <p>天津传统小吃，由黄豆制成，香脆可口，是老天津人喜爱的零食。</p>
+                        <a href="food-detail.html?id=bengdou" class="btn">了解详情</a>
+                    </div>
+                </div>
+
+                <!-- 煎饼果子 -->
+                <div class="food-item" data-category="面点">
+                    <div class="food-image">
+                        <img src="../images/jianbing.jpg" alt="煎饼果子">
+                    </div>
+                    <div class="food-content">
+                        <h3>煎饼果子</h3>
+                        <div class="food-meta">
+                            <span class="food-year">民国初期</span>
+                            <span class="food-location">天津全市</span>
+                        </div>
+                        <p>天津著名小吃，薄脆酥香，是天津人最爱的早点之一。</p>
+                        <a href="food-detail.html?id=jianbing" class="btn">了解详情</a>
+                    </div>
+                </div>
+
+                <!-- 嘎巴菜 -->
+                <div class="food-item" data-category="小吃">
+                    <div class="food-image">
+                        <img src="../images/guobacai.jpg" alt="嘎巴菜">
+                    </div>
+                    <div class="food-content">
+                        <h3>嘎巴菜</h3>
+                        <div class="food-meta">
+                            <span class="food-year">民国时期</span>
+                            <span class="food-location">天津市和平区</span>
+                        </div>
+                        <p>传统家常菜，嘎巴酥脆，配菜鲜美，是天津独特的地方美食。</p>
+                        <a href="food-detail.html?id=gabacai" class="btn">了解详情</a>
+                    </div>
+                </div>
+                
+                <!-- 茶汤 -->
+                <div class="food-item" data-category="饮品">
+                    <div class="food-image">
+                        <img src="../images/chatang.jpg" alt="茶汤">
+                    </div>
+                    <div class="food-content">
+                        <h3>茶汤</h3>
+                        <div class="food-meta">
+                            <span class="food-year">清代</span>
+                            <span class="food-location">天津市南开区</span>
+                        </div>
+                        <p>天津独特的传统饮品，甜咸适口，有浓厚的津门风味。</p>
+                        <a href="food-detail.html?id=chatang" class="btn">了解详情</a>
+                    </div>
+                </div>
+
+                <!-- 海河牛奶 -->
+                <div class="food-item" data-category="饮品">
+                    <div class="food-image">
+                        <img src="../images/haihe.jpg" alt="海河牛奶">
+                    </div>
+                    <div class="food-content">
+                        <h3>海河牛奶</h3>
+                        <div class="food-meta">
+                            <span class="food-year">1904年</span>
+                            <span class="food-location">天津市和平区</span>
+                        </div>
+                        <p>天津特色传统饮品，醇厚香甜，营养丰富，百年老字号。</p>
+                        <a href="food-detail.html?id=haihe" class="btn">了解详情</a>
+                    </div>
+                </div>
+
+                <!-- 赤土扣肉 -->
+                <div class="food-item" data-category="名菜">
+                    <div class="food-image">
+                        <img src="../images/chitu.jpg" alt="赤土扣肉">
+                    </div>
+                    <div class="food-content">
+                        <h3>赤土扣肉</h3>
+                        <div class="food-meta">
+                            <span class="food-year">晚清时期</span>
+                            <span class="food-location">天津市南开区</span>
+                        </div>
+                        <p>天津传统名菜，色泽红亮，肥而不腻，口感独特，汤汁浓郁。</p>
+                        <a href="food-detail.html?id=chitu" class="btn">了解详情</a>
+                    </div>
+                </div>
+
+                <!-- 果仁张 -->
+                <div class="food-item" data-category="糕点">
+                    <div class="food-image">
+                        <img src="../images/guoren.jpg" alt="果仁张">
+                    </div>
+                    <div class="food-content">
+                        <h3>果仁张</h3>
+                        <div class="food-meta">
+                            <span class="food-year">1927年</span>
+                            <span class="food-location">天津市河东区</span>
+                        </div>
+                        <p>天津传统糕点，香甜可口，果仁丰富，口感独特，层次丰富。</p>
+                        <a href="food-detail.html?id=guoren" class="btn">了解详情</a>
+                    </div>
+                </div>
+
+                <!-- 祥禾饽饽铺 -->
+                <div class="food-item" data-category="面点">
+                    <div class="food-image">
+                        <img src="../images/xianghe.jpg" alt="祥禾饽饽铺">
+                    </div>
+                    <div class="food-content">
+                        <h3>祥禾饽饽铺</h3>
+                        <div class="food-meta">
+                            <span class="food-year">清代</span>
+                            <span class="food-location">天津市和平区</span>
+                        </div>
+                        <p>天津传统面点，品种繁多，工艺精湛，口感细腻，老字号品牌。</p>
+                        <a href="food-detail.html?id=xianghe" class="btn">了解详情</a>
+                    </div>
+                </div>
+            </div>
+            <div id="no-result" class="no-result" style="display: none;">
+                <p>抱歉，没有找到符合条件的美食。</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>津食今忆</h2>
+                <p>品味百年老字号，回忆津门好滋味</p>
+            </div>
+            <div class="footer-links">
+                <h3>快速链接</h3>
+                <ul>
+                    <li><a href="../index.html">首页</a></li>
+                    <li><a href="foods.html">美食展示</a></li>
+                    <li><a href="culture.html">美食文化</a></li>
+                    <li><a href="message.html">留言板</a></li>
+                    <li><a href="about.html">关于我们</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>联系我们</h3>
+                <p>地址: 天津师范大学管理学院津食今忆项目组</p>
+                <p>电话: 022-12345678</p>
+                <p>邮箱: contact@jinshjinyi.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 津食今忆 - 天津美食老字号宣传网站</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../js/script.js"></script>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/foods.js"></script>
+</body>
+</html> 

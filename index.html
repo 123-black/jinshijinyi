@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>津食今忆 - 天津美食老字号</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link href="https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <div id="navbar-container"></div>
+
+    <!-- 主要内容 -->
+    <main>
+        <!-- 网站标题和介绍 -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="site-title">津食今忆</h1>
+                <p class="site-slogan">品味百年老字号，回忆津门好滋味</p>
+                <div class="hero-buttons">
+                    <a href="#food-section" class="btn btn-primary">探索美食</a>
+                    <a href="pages/culture.html" class="btn btn-secondary">了解文化</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 轮播图部分 -->
+        <section class="slider-container" id="food-section">
+            <h2 class="section-title">天津八大老字号</h2>
+            <div class="slider">
+                <div class="slides">
+                    <div class="slide active">
+                        <img src="images/goubuli.jpg" alt="狗不理包子">
+                        <div class="slide-caption">
+                            <h2>狗不理包子</h2>
+                            <p>百年老字号，天津特色小吃代表</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="images/erdoyan-banner.jpg" alt="耳朵眼炸糕">
+                        <div class="slide-caption">
+                            <h2>耳朵眼炸糕</h2>
+                            <p>外酥里嫩，甜而不腻</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="images/mahua-banner.png" alt="桂发祥十八街麻花">
+                        <div class="slide-caption">
+                            <h2>桂发祥十八街麻花</h2>
+                            <p>香酥可口，甜咸两味</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="images/zhaochenglin-banner.jpg" alt="赵成林赤土扣肉">
+                        <div class="slide-caption">
+                            <h2>赵成林赤土扣肉</h2>
+                            <p>色香味俱全，津门传统名菜</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="images/guorenzhang.jpg" alt="果仁张">
+                        <div class="slide-caption">
+                            <h2>果仁张</h2>
+                            <p>果香浓郁，甜而不腻，香脆可口</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="images/jianbing-banner.jpg" alt="煎饼果子">
+                        <div class="slide-caption">
+                            <h2>煎饼果子</h2>
+                            <p>天津人的早餐首选</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="images/xianghe-bopo.jpg" alt="祥禾饽饽铺">
+                        <div class="slide-caption">
+                            <h2>祥禾饽饽铺</h2>
+                            <p>传统面点，工艺精湛</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="images/haihe-milk.jpg" alt="海河牛奶">
+                        <div class="slide-caption">
+                            <h2>海河牛奶</h2>
+                            <p>津门老品牌，鲜香醇厚</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="slider-btn prev">&#10094;</button>
+                <button class="slider-btn next">&#10095;</button>
+                <div class="slider-dots">
+                    <!-- 点元素由JavaScript动态创建 -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 美食介绍部分 - 使用网格布局展示8个美食 -->
+        <section class="food-intro">
+            <h2 class="section-title">传承百年 • 津门味道</h2>
+            <div class="food-grid">
+                <div class="food-card">
+                    <div class="food-card-image">
+                        <img src="images/goubuli4.jpg" alt="狗不理包子店">
+                    </div>
+                    <div class="food-card-content">
+                        <h3>狗不理包子</h3>
+                        <p>创建于1858年，已有百年历史，以制作精良的包子闻名于世。</p>
+                        <a href="pages/food-detail.html?id=goubuli" class="btn">了解更多</a>
+                    </div>
+                </div>
+                <div class="food-card">
+                    <div class="food-card-image">
+                        <img src="images/erduoyan-shop.jpg" alt="耳朵眼炸糕店">
+                    </div>
+                    <div class="food-card-content">
+                        <h3>耳朵眼炸糕</h3>
+                        <p>始于清代的传统小吃，外酥里糯，甜咸适口，深受天津人喜爱。</p>
+                        <a href="pages/food-detail.html?id=erduoyan" class="btn">了解更多</a>
+                    </div>
+                </div>
+                <div class="food-card">
+                    <div class="food-card-image">
+                        <img src="images/mahua-shop.jpg" alt="桂发祥麻花店">
+                    </div>
+                    <div class="food-card-content">
+                        <h3>桂发祥十八街麻花</h3>
+                        <p>创建于1927年，是天津著名的传统特色小吃，外酥内软，香而不腻。</p>
+                        <a href="pages/food-detail.html?id=mahua" class="btn">了解更多</a>
+                    </div>
+                </div>
+                <div class="food-card">
+                    <div class="food-card-image">
+                        <img src="images/zhaochenglin.jpg" alt="赵成林赤土扣肉">
+                    </div>
+                    <div class="food-card-content">
+                        <h3>赵成林赤土扣肉</h3>
+                        <p>始创于1938年，是天津著名的传统名菜，肉质软烂，香气扑鼻。</p>
+                        <a href="pages/food-detail.html?id=zhaochenglin" class="btn">了解更多</a>
+                    </div>
+                </div>
+                <div class="food-card">
+                    <div class="food-card-image">
+                        <img src="images/guorenzhang-shop.jpg" alt="果仁张店">
+                    </div>
+                    <div class="food-card-content">
+                        <h3>果仁张</h3>
+                        <p>始创于清朝末年，以精选坚果和蜂蜜制作，香脆可口，回味无穷。</p>
+                        <a href="pages/food-detail.html?id=guorenzhang" class="btn">了解更多</a>
+                    </div>
+                </div>
+                <div class="food-card">
+                    <div class="food-card-image">
+                        <img src="images/jianbing-shop.jpg" alt="煎饼果子店">
+                    </div>
+                    <div class="food-card-content">
+                        <h3>煎饼果子</h3>
+                        <p>天津特色小吃，薄脆可口，营养丰富，是传统早点之一。</p>
+                        <a href="pages/food-detail.html?id=jianbing" class="btn">了解更多</a>
+                    </div>
+                </div>
+                <div class="food-card">
+                    <div class="food-card-image">
+                        <img src="images/xianghe-shop.jpg" alt="祥禾饽饽铺">
+                    </div>
+                    <div class="food-card-content">
+                        <h3>祥禾饽饽铺</h3>
+                        <p>始于清代的传统面点铺，技艺精湛，品种丰富多样。</p>
+                        <a href="pages/food-detail.html?id=xianghe" class="btn">了解更多</a>
+                    </div>
+                </div>
+                <div class="food-card">
+                    <div class="food-card-image">
+                        <img src="images/haihe-milk-shop.jpg" alt="海河牛奶">
+                    </div>
+                    <div class="food-card-content">
+                        <h3>海河牛奶</h3>
+                        <p>天津老品牌，自1956年创立，以天然鲜奶闻名，品质卓越。</p>
+                        <a href="pages/food-detail.html?id=haihemilk" class="btn">了解更多</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 美食文化部分 -->
+        <section class="food-culture">
+            <h2 class="section-title">津门风味 · 文化传承</h2>
+            <div class="culture-content">
+                <div class="culture-text">
+                    <h3 class="culture-subtitle">百年匠心 · 一脉相承</h3>
+                    <p>天津，这座有着悠久历史的北方港口城市，孕育了丰富多彩的饮食文化。从清末到民国，再到如今，天津的美食文化在传承中不断创新，形成了独具特色的"津味"。</p>
+                    <p>天津的老字号美食，不仅仅是一种食物，更是一种文化的传承，一段历史的见证。每一家老字号背后，都有一个关于匠心、关于坚守的故事。</p>
+                    <a href="pages/culture.html" class="btn btn-large">探索津门美食文化</a>
+                </div>
+                <div class="culture-image">
+                    <img src="images/tianjin-food-culture.jpg" alt="天津美食文化">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>津食今忆</h2>
+                <p>品味百年老字号，回忆津门好滋味</p>
+            </div>
+            <div class="footer-links">
+                <h3>快速链接</h3>
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="pages/foods.html">美食展示</a></li>
+                    <li><a href="pages/culture.html">美食文化</a></li>
+                    <li><a href="pages/message.html">留言板</a></li>
+                    <li><a href="pages/about.html">关于我们</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>联系我们</h3>
+                <p>地址: 天津师范大学管理学院津食今忆项目组</p>
+                <p>电话: 022-12345678</p>
+                <p>邮箱: contact@jinshjinyi.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 津食今忆 - 天津美食老字号宣传网站</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/slider.js"></script>
+</body>
+</html> 
