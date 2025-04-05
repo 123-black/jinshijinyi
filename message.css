@@ -1,0 +1,173 @@
+/* 留言板页面样式 */
+
+:root {
+    --primary-color: #e64a19;
+    --accent-color: #ff7043;
+    --white: #ffffff;
+    --text-color: #333333;
+    --text-light: #666666;
+    --background-light: #f9f9f9;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.message-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/tianjin-food-culture.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.message-hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.message-hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.message-hero p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+.message-board {
+    padding: 60px 20px;
+    background-color: var(--background-light);
+    background-image: url('../images/tianjin-food-culture.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.message-board::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.92);
+    z-index: 1;
+}
+
+.message-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.message-form-container {
+    flex: 1;
+    min-width: 300px;
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    padding: 30px;
+}
+
+.message-list-container {
+    flex: 1;
+    min-width: 300px;
+}
+
+/* 表单样式 */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+#message-form button {
+    margin-top: 10px;
+    width: 100%;
+}
+
+/* 留言列表样式 */
+#message-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.message-item {
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    padding: 20px;
+    transition: transform 0.3s;
+}
+
+.message-item:hover {
+    transform: translateY(-5px);
+}
+
+.message-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.message-author {
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: 18px;
+}
+
+.message-time {
+    color: var(--text-light);
+    font-size: 14px;
+}
+
+.message-content {
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .message-container {
+        flex-direction: column;
+    }
+    
+    .message-hero h1 {
+        font-size: 28px;
+    }
+    
+    .message-hero p {
+        font-size: 16px;
+    }
+} 

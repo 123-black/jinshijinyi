@@ -1,0 +1,939 @@
+/* 美食文化页面样式 */
+
+:root {
+    --primary-color: #e64a19;
+    --accent-color: #ff7043;
+    --white: #ffffff;
+    --text-color: #333333;
+    --text-light: #666666;
+    --background-light: #f9f9f9;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.culture-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('../images/tianjin-food-culture.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 130px 20px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.culture-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(230, 74, 25, 0.6) 0%, rgba(0, 0, 0, 0.7) 100%);
+    z-index: 1;
+}
+
+.culture-hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.culture-hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.culture-hero p {
+    font-size: 20px;
+    opacity: 0.9;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 介绍部分 */
+.culture-intro {
+    padding: 80px 0;
+    background-color: var(--white);
+    position: relative;
+    overflow: hidden;
+}
+
+.culture-intro::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+}
+
+.culture-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 50px;
+    margin-top: 30px;
+}
+
+.culture-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.culture-text p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
+.culture-text p:first-of-type {
+    font-size: 1.1em;
+    color: #111;
+}
+
+.culture-image {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1), 0 3px 10px rgba(0, 0, 0, 0.1);
+    transform: rotate(2deg);
+    transition: all 0.5s ease;
+}
+
+.culture-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.7s ease;
+}
+
+.culture-image:hover {
+    transform: rotate(0deg);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15), 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.culture-image:hover img {
+    transform: scale(1.05);
+}
+
+/* 历史时间线 */
+.culture-history {
+    padding: 80px 0;
+    background-color: var(--background-light);
+    position: relative;
+    overflow: hidden;
+}
+
+.culture-history::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 40%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(230, 74, 25, 0.05));
+    pointer-events: none;
+}
+
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 60px auto 0;
+    padding: 20px 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 20px;
+    width: 3px;
+    background: linear-gradient(to bottom, rgba(230, 74, 25, 0.3), var(--primary-color), rgba(230, 74, 25, 0.3));
+    opacity: 0.8;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 50px;
+    padding-left: 60px;
+    transition: transform 0.3s ease;
+}
+
+.timeline-item:hover {
+    transform: translateX(5px);
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: 15px;
+    top: 0;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    border: 3px solid var(--white);
+    box-shadow: 0 0 0 4px rgba(232, 106, 51, 0.3);
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.timeline-item:hover .timeline-dot {
+    transform: scale(1.2);
+    box-shadow: 0 0 0 6px rgba(232, 106, 51, 0.4);
+}
+
+.timeline-date {
+    display: inline-block;
+    padding: 6px 16px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 15px;
+    box-shadow: 0 3px 6px rgba(230, 74, 25, 0.2);
+    transition: all 0.3s ease;
+}
+
+.timeline-item:hover .timeline-date {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(230, 74, 25, 0.3);
+}
+
+.timeline-content {
+    background-color: var(--white);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+}
+
+.timeline-item:hover .timeline-content {
+    border-left-color: var(--primary-color);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-content h3 {
+    color: var(--primary-color);
+    margin-bottom: 12px;
+    font-size: 22px;
+}
+
+.timeline-content p {
+    color: var(--text-color);
+    line-height: 1.7;
+}
+
+/* 特点部分 */
+.culture-features {
+    padding: 80px 0;
+    background-color: var(--white);
+    position: relative;
+    overflow: hidden;
+}
+
+.culture-features::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background: linear-gradient(to top, rgba(249, 249, 249, 0.5), rgba(255, 255, 255, 0));
+    pointer-events: none;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 15px;
+    margin-top: 50px;
+}
+
+.feature-item {
+    background-color: var(--background-light);
+    border-radius: 12px;
+    padding: 35px 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border-bottom: 3px solid transparent;
+}
+
+.feature-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    border-bottom-color: var(--primary-color);
+}
+
+.feature-icon {
+    font-size: 46px;
+    margin-bottom: 25px;
+    text-align: center;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.feature-item:hover .feature-icon {
+    transform: scale(1.2) rotate(10deg);
+}
+
+.feature-item h3 {
+    color: var(--primary-color);
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.feature-item p {
+    color: var(--text-color);
+    line-height: 1.7;
+}
+
+/* 非遗传承部分 */
+.culture-inheritance {
+    padding: 80px 0;
+    background-color: var(--background-light);
+    position: relative;
+    overflow: hidden;
+}
+
+.culture-inheritance::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 10% 20%, rgba(230, 74, 25, 0.03) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.inheritance-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-top: 40px;
+    align-items: center;
+}
+
+.inheritance-image {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    transform: perspective(1000px) rotateY(-5deg);
+    transition: all 0.5s ease;
+}
+
+.inheritance-image:hover {
+    transform: perspective(1000px) rotateY(0deg);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.inheritance-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.7s ease;
+}
+
+.inheritance-image:hover img {
+    transform: scale(1.05);
+}
+
+.inheritance-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.inheritance-text p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
+.inheritance-text p:first-of-type {
+    font-size: 1.1em;
+    color: #111;
+    font-weight: 500;
+}
+
+.inheritance-actions {
+    margin-top: 35px;
+}
+
+.inheritance-actions .btn {
+    padding: 14px 30px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* 现代发展部分 */
+.culture-modern {
+    padding: 80px 0;
+    background-color: var(--white);
+    position: relative;
+    overflow: hidden;
+}
+
+.culture-modern::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(230, 74, 25, 0.03) 0%, rgba(255, 255, 255, 0) 50%);
+    pointer-events: none;
+}
+
+.modern-content {
+    margin-top: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.modern-text {
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.modern-text::after {
+    content: '';
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    border-radius: 3px;
+}
+
+.modern-text p {
+    line-height: 1.8;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+.modern-text p:first-of-type {
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #222;
+}
+
+.modern-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.gallery-item {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    height: 280px;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+}
+
+.gallery-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 60%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.gallery-item:hover::before {
+    opacity: 1;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+/* 响应式设计 */
+@media (max-width: 992px) {
+    .features-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+    
+    .modern-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .culture-hero h1 {
+        font-size: 32px;
+    }
+    
+    .timeline::before {
+        left: 15px;
+    }
+    
+    .timeline-dot {
+        left: 10px;
+    }
+    
+    .timeline-item {
+        padding-left: 45px;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .culture-content {
+        flex-direction: column;
+    }
+    
+    .inheritance-content {
+        flex-direction: column-reverse;
+    }
+    
+    .culture-image, .inheritance-image {
+        width: 100%;
+        max-width: none;
+    }
+    
+    .famous-food-item {
+        flex-direction: column;
+    }
+    
+    .famous-food-item:nth-child(even) {
+        flex-direction: column-reverse;
+    }
+    
+    .food-image {
+        width: 100%;
+        max-width: none;
+    }
+    
+    .exchange-content {
+        flex-direction: column;
+    }
+    
+    .exchange-events {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .modern-gallery {
+        grid-template-columns: 1fr;
+    }
+    
+    .gallery-item {
+        height: 200px;
+    }
+    
+    .timeline-content {
+        padding: 15px;
+    }
+}
+
+/* 津门老字号名品样式 */
+.famous-foods {
+    padding: 80px 0;
+    background-color: var(--white);
+    position: relative;
+    overflow: hidden;
+}
+
+.famous-foods::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+}
+
+.famous-foods-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 50px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--text-color);
+    position: relative;
+}
+
+.famous-foods-intro::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    border-radius: 3px;
+}
+
+.famous-food-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 80px;
+    gap: 50px;
+    position: relative;
+    padding: 20px;
+    border-radius: 16px;
+    transition: all 0.4s ease;
+}
+
+.famous-food-item:last-child {
+    margin-bottom: 0;
+}
+
+.famous-food-item:hover {
+    background-color: rgba(249, 249, 249, 0.7);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transform: translateY(-5px);
+}
+
+.food-image {
+    flex: 1;
+    min-width: 300px;
+    max-width: 450px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s ease;
+    transform: perspective(1000px) rotateY(3deg);
+}
+
+.famous-food-item:nth-child(even) .food-image {
+    transform: perspective(1000px) rotateY(-3deg);
+}
+
+.food-image:hover {
+    transform: perspective(1000px) rotateY(0deg) !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.food-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.7s ease;
+}
+
+.food-image:hover img {
+    transform: scale(1.05);
+}
+
+.food-description {
+    flex: 2;
+    min-width: 300px;
+}
+
+.food-description h3 {
+    font-size: 32px;
+    color: var(--primary-color);
+    margin-bottom: 12px;
+    position: relative;
+    display: inline-block;
+}
+
+.food-description h3::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
+    transform: scaleX(0.3);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.famous-food-item:hover .food-description h3::after {
+    transform: scaleX(1);
+}
+
+.food-year {
+    display: inline-block;
+    padding: 6px 14px;
+    background-color: rgba(230, 74, 25, 0.1);
+    color: var(--primary-color);
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(230, 74, 25, 0.1);
+    transition: all 0.3s ease;
+}
+
+.famous-food-item:hover .food-year {
+    background-color: rgba(230, 74, 25, 0.15);
+    box-shadow: 0 4px 8px rgba(230, 74, 25, 0.15);
+}
+
+.food-description p {
+    margin-bottom: 15px;
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
+.food-description p:first-of-type {
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #222;
+}
+
+/* 美食文化交流样式 */
+.food-culture-exchange {
+    padding: 80px 0;
+    background-color: var(--background-light);
+    position: relative;
+    overflow: hidden;
+}
+
+.food-culture-exchange::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 90% 90%, rgba(230, 74, 25, 0.05) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.exchange-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-top: 40px;
+}
+
+.exchange-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.exchange-text p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
+.exchange-text p:first-of-type {
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #222;
+}
+
+.exchange-text .btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 14px 30px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 12px rgba(230, 74, 25, 0.2);
+}
+
+.exchange-text .btn:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(230, 74, 25, 0.3);
+}
+
+.exchange-events {
+    flex: 1;
+    min-width: 300px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.event-card {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.event-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    border-bottom-color: var(--primary-color);
+}
+
+.event-time {
+    display: inline-block;
+    padding: 6px 14px;
+    background-color: rgba(230, 74, 25, 0.1);
+    color: var(--primary-color);
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.event-card h3 {
+    font-size: 22px;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.event-card p {
+    color: var(--text-color);
+    line-height: 1.7;
+}
+
+/* 狗不理包子历史专栏样式 */
+.goubuli-history {
+    padding: 60px 0;
+    background-color: #fff9f3;
+}
+
+.history-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.history-text {
+    text-align: justify;
+}
+
+.history-text p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
+.history-gallery {
+    margin: 20px 0;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    text-align: center;
+    font-size: 14px;
+}
+
+.history-quote {
+    margin: 30px 0;
+    padding: 20px;
+    background-color: rgba(230, 74, 25, 0.05);
+    border-left: 4px solid var(--primary-color);
+    border-radius: 4px;
+}
+
+.history-quote blockquote {
+    margin: 0;
+    padding: 0;
+    font-style: italic;
+    color: var(--text-color);
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+/* 狗不理历史专栏响应式调整 */
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+} 

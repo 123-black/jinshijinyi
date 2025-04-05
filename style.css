@@ -1,0 +1,654 @@
+/* 全局样式 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+
+:root {
+    --primary-color: #E86A33; /* 温暖的橙红色 */
+    --secondary-color: #F2A65A; /* 柔和的橙黄色 */
+    --accent-color: #C43302; /* 深橙红色 */
+    --text-color: #333333; /* 主要文字颜色 */
+    --text-light: #777777; /* 次要文字颜色 */
+    --background-light: #FFF8F0; /* 浅色背景 */
+    --white: #FFFFFF;
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    --gradient-primary: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+main {
+    min-height: calc(100vh - 300px);
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+a {
+    text-decoration: none;
+    color: #e64a19;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+a:hover {
+    color: #ff7043;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* 通用容器 */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* 通用按钮 */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #e64a19;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(230, 74, 25, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn:hover {
+    background-color: #ff7043;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(230, 74, 25, 0.4);
+}
+
+.btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 3px rgba(230, 74, 25, 0.4);
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.6);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%);
+    transform-origin: 50% 50%;
+}
+
+.btn:hover::after {
+    animation: ripple 1s ease-out;
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(0, 0);
+        opacity: 0.5;
+    }
+    20% {
+        transform: scale(25, 25);
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(40, 40);
+    }
+}
+
+/* 标题样式 */
+.section-title {
+    font-size: 32px;
+    color: #e64a19;
+    margin-bottom: 30px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #e64a19;
+}
+
+/* 卡片阴影和悬停效果 */
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* 页脚样式 */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 50px 0 20px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 40px;
+    margin-bottom: 30px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+}
+
+.footer-logo {
+    flex: 1;
+    min-width: 200px;
+    max-width: 300px;
+}
+
+.footer-links {
+    flex: 1;
+    min-width: 200px;
+    max-width: 250px;
+}
+
+.footer-contact {
+    flex: 1;
+    min-width: 200px;
+    max-width: 300px;
+}
+
+.footer-logo h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.footer-links h3,
+.footer-contact h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-links h3:after,
+.footer-contact h3:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background-color: #e64a19;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    color: #ddd;
+    transition: all 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: #ff7043;
+    padding-left: 5px;
+}
+
+.footer-contact p {
+    margin-bottom: 10px;
+    color: #ddd;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 14px;
+    color: #aaa;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .footer-content > div {
+        flex-basis: 100%;
+        margin-bottom: 30px;
+    }
+    
+    .container {
+        width: 95%;
+    }
+    
+    .section-title {
+        font-size: 28px;
+    }
+}
+
+/* 英雄区域样式 */
+.hero-section {
+    position: relative;
+    height: 500px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/goubuli.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    margin-bottom: 40px;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.site-title {
+    font-size: 60px;
+    margin-bottom: 10px;
+    font-family: 'ZCOOL XiaoWei', serif;
+    letter-spacing: 2px;
+}
+
+.site-slogan {
+    font-size: 24px;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* 轮播图样式 */
+.slider-container {
+    margin-bottom: 60px;
+    padding: 0 20px;
+}
+
+.slider {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.slides {
+    position: relative;
+    height: 500px;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    overflow: hidden;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.slide-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 30px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+    color: var(--white);
+}
+
+.slide-caption h2 {
+    margin: 0 0 10px 0;
+    font-size: 32px;
+    font-family: 'ZCOOL XiaoWei', 'Noto Sans SC', sans-serif;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    padding: 15px;
+    font-size: 18px;
+    transition: background 0.3s, transform 0.3s;
+    z-index: 10;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-btn:hover {
+    background: rgba(0, 0, 0, 0.7);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+.slider-dots {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    margin: 0 4px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    display: inline-block;
+}
+
+.dot.active {
+    background: var(--white);
+    transform: scale(1.2);
+}
+
+/* 美食卡片样式 */
+.food-intro {
+    padding: 60px 20px;
+    background-color: var(--background-light);
+}
+
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.food-card {
+    background-color: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.food-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.food-card-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.food-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.food-card:hover .food-card-image img {
+    transform: scale(1.05);
+}
+
+.food-card-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.food-card h3 {
+    font-size: 22px;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-family: 'ZCOOL XiaoWei', 'Noto Sans SC', sans-serif;
+}
+
+.food-card p {
+    color: var(--text-light);
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.food-card .btn {
+    align-self: flex-start;
+}
+
+/* 美食文化部分 */
+.food-culture {
+    padding: 80px 20px;
+    background-color: var(--white);
+}
+
+.culture-content {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 60px;
+}
+
+.culture-text {
+    flex: 1;
+}
+
+.culture-subtitle {
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    font-family: 'ZCOOL XiaoWei', 'Noto Sans SC', sans-serif;
+}
+
+.culture-text p {
+    margin-bottom: 20px;
+    color: var(--text-light);
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.culture-image {
+    flex: 1;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    position: relative;
+}
+
+.culture-image::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    bottom: 20px;
+    left: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.culture-image img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.culture-image:hover img {
+    transform: scale(1.05);
+}
+
+/* 响应式设计 */
+@media (max-width: 992px) {
+    .hero-section {
+        height: 400px;
+    }
+    
+    .site-title {
+        font-size: 48px;
+    }
+    
+    .site-slogan {
+        font-size: 20px;
+    }
+    
+    .slides {
+        height: 400px;
+    }
+    
+    .culture-content {
+        flex-direction: column-reverse;
+        gap: 40px;
+    }
+    
+    .culture-image {
+        width: 100%;
+    }
+    
+    .culture-image img {
+        height: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        height: 350px;
+    }
+    
+    .site-title {
+        font-size: 40px;
+    }
+    
+    .slides {
+        height: 300px;
+    }
+    
+    .slide-caption h2 {
+        font-size: 26px;
+    }
+    
+    .food-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        height: 300px;
+    }
+    
+    .site-title {
+        font-size: 36px;
+    }
+    
+    .site-slogan {
+        font-size: 18px;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .slides {
+        height: 250px;
+    }
+    
+    .section-title {
+        font-size: 26px;
+    }
+    
+    .slide-caption h2 {
+        font-size: 22px;
+    }
+} 
